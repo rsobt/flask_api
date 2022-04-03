@@ -10,8 +10,3 @@ config_name = os.environ.get("CONFIG", "local")
 app = Flask(__name__)
 app.config.from_object(config[config_name])
 app.register_blueprint(api)
-
-
-@app.route("/")
-def index():
-    return "Hello, World!"
